@@ -1,0 +1,42 @@
+<T3DataStructure>
+	<meta>
+	<langDisable>1</langDisable>
+	<!--  <langChildren>1</langChildren>!-->
+		</meta>
+<sheets>
+	<sDEF>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>Settings</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+		<settings.layout>
+			<TCEforms>
+				<label>Layout</label>
+				<config>
+					<type>select</type>
+					<items>
+						<item index="0" type="array">
+							<numIndex index="0">Standard 1 unit højde</numIndex>
+							<numIndex index="1"></numIndex>
+						</item>
+						<item index="1" type="array">
+							<numIndex index="0">2 unit (fast) højde med grafisk resultat</numIndex>
+							<numIndex index="1">2unitfixed</numIndex>
+						</item>
+						<item index="2" type="array">
+							<numIndex index="0">Fleksibel højde</numIndex>
+							<numIndex index="1">flexible</numIndex>
+						</item>
+					</items>
+				</config>
+				<default>white</default>
+			</TCEforms>
+		</settings.layout>
+
+		</el>
+	</ROOT>
+	</sDEF>
+</sheets>
+</T3DataStructure>

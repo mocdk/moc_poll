@@ -1,0 +1,13 @@
+<f:layout name="default">
+	<f:section name="content">
+		<h5>{poll.question}</h5>
+		<f:for each="{poll.responses}" as="anwser">
+			<input type="radio" name="response" value="{anwser.uid}" id="{anwser.uid}" class="reply"/> <label for="{anwser.uid}">{anwser.reply}</label><br />
+		</f:for>
+		<div class="buttonPoll">
+			<input type="image" src="fileadmin/templates/main/images/box/button_stem.png" value="Stem" class="vote-button" />
+		</div>
+	</f:section>
+</f:layout>
+
+

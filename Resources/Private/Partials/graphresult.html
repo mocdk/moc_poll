@@ -1,0 +1,17 @@
+{namespace moc=Tx_MocPoll_ViewHelpers}
+<h5>{poll.question}</h5>
+<div class="pollResults">
+	<ul class="chartlist">
+		<f:for each="{poll.responses}" as="anwser">
+			<li><strong>{anwser.reply}</strong>
+				<span class="count"><moc:percent total="{totalCount}" issueCount="{anwser.count}" />%</span>
+				<div class="percentContainer">
+					<span class="index" style="width:<moc:percent total="{totalCount}" issueCount="{anwser.count}" />%">(<moc:percent total="{totalCount}" issueCount="{anwser.count}" />%)</span>
+				</div>
+			</li>
+      	</f:for>
+	</ul>
+</div><!-- end .pollResults -->
+<p>Antal stemmer: <span>{totalCount}</span></p>
+<div class="clear"><!-- IE fix --></div>
+

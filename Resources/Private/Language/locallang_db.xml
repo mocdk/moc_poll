@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'MOC poll'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_mocpoll_domain_model_poll">Afstemning</label>
+			<label index="tx_mocpoll_domain_model_poll.question">Spørgsmål</label>
+			<label index="tx_mocpoll_domain_model_poll.responses">Svar</label>
+			<label index="tx_mocpoll_domain_model_response">Svar</label>
+			<label index="tx_mocpoll_domain_model_response.reply">Svar</label>
+			<label index="tx_mocpoll_domain_model_response.count">Antal svar</label>			
+			<label index="tell_us">Giv din mening</label>
+		</languageKey>
+	</data>
+</T3locallang>

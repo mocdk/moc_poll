@@ -1,0 +1,17 @@
+{namespace moc=Tx_MocPoll_ViewHelpers}
+		<h5>{poll.question}</h5>
+		<ul>
+		<f:for each="{poll.responses}" as="anwser">
+			<li>
+				{anwser.reply}&nbsp;
+				<f:if condition="{highest} == {moc:percent(total: '{totalCount}', issueCount: '{anwser.count}')}">
+					<f:then>
+						<span class="percentage highest"><moc:percent total="{totalCount}" issueCount="{anwser.count}" />%</span>
+					</f:then>
+					<f:else>
+						<span class="percentage"><moc:percent total="{poll.totalCount}" issueCount="{anwser.count}" />%</span>
+					</f:else>
+				</f:if>
+			</li>
+		</f:for>
+		</ul>

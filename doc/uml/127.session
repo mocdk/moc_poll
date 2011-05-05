@@ -1,0 +1,12 @@
+window_sizes 1800 1050 450 1344 856 120
+diagrams
+  active  classdiagram_ref 128127 // Display
+    1344 856 100 4 0 0
+end
+show_stereotypes
+selected attribute_ref 128511 // count
+open
+  class_ref 128127 // Poll
+  class_ref 128255 // Response
+end
+end
