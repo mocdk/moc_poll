@@ -8,6 +8,7 @@
 		<languageKey index="default" type="array">
 			<label index="tx_mocpoll_domain_model_poll">Afstemning</label>
 			<label index="tx_mocpoll_domain_model_poll.question">Spørgsmål</label>
+			<label index="tx_mocpoll_domain_model_poll.image">Billedfil</label>
 			<label index="tx_mocpoll_domain_model_poll.responses">Svar</label>
 			<label index="tx_mocpoll_domain_model_response">Svar</label>
 			<label index="tx_mocpoll_domain_model_response.reply">Svar</label>

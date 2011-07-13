@@ -18,6 +18,7 @@ $tempColumns = array (
         "newRecordLinkAddTitle" => 1,
         "expandSingle" => 1,
         "useSortable" => 1,
+        "newRecordLinkPosition" => 'both',
 	  )
 	)
   )

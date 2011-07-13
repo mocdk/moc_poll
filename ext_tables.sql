@@ -10,6 +10,7 @@ CREATE TABLE `tx_mocpoll_domain_model_poll` (
 `l18n_parent` int(11) DEFAULT '0' NOT NULL,
 `l18n_diffsource` mediumblob NOT NULL,
 `question` text,
+`image` text,
 `responses` varchar(255) DEFAULT ''
 PRIMARY KEY (uid),
 KEY parent (pid),

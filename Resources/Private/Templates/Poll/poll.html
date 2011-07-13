@@ -1,11 +1,11 @@
 <f:layout name="default">
 	<f:section name="content">
-		<h5>{poll.question}</h5>
+		<h2 class="cufon">{poll.question}</h2>
 		<f:for each="{poll.responses}" as="anwser">
-			<input type="radio" name="response" value="{anwser.uid}" id="{anwser.uid}" class="reply"/> <label for="{anwser.uid}">{anwser.reply}</label><br />
+			<div style="display:block;margin-bottom:10px;"><input type="radio" name="response" value="{anwser.uid}" id="{anwser.uid}" class="reply"/>&nbsp;<label for="{anwser.uid}" style="">{anwser.reply}</label></div>
 		</f:for>
 		<div class="buttonPoll">
-			<input type="image" src="fileadmin/templates/main/images/box/button_stem.png" value="Stem" class="vote-button" />
+			<input type="button" value="Stem" class="vote-button" />
 		</div>
 	</f:section>
 </f:layout>

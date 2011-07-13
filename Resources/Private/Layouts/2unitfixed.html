@@ -1,9 +1,9 @@
-<div class="boxy double MocPoll" smk:resultMode="graph" smk:pollId="{poll.uid}">
-	<div class="boxTop">
-		<h5 class="cufon"><f:translate key="tell_us"/></h5>
+<div class="mocpoll size_1 double framed palette_A4 has_header" smk:resultMode="graph" smk:pollId="{poll.uid}">
+	<div class="top">
+		<img src="uploads/moc_poll/{poll.image}" width="100%"/>
 	</div>
-	<hr />
-	<div class="content">
+	<div class="bottom content" style="background-color:#f7ffe3;">
+		<!--render content here-->
 		<f:render section="content" />
-	</div><!-- end .content -->
-</div><!-- end .boxy -->
+	</div>
+</div>
