@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+<file source-language="en" datatype="plaintext" original="messages" date="2013-09-13T09:42:20Z" product-name="moc_poll">
+	<header/>
+	<body>
+		<trans-unit id="pluginTitle" xml:space="preserve" approved="yes">
+				<source>MocPoll</source>
+				<target>MocPoll</target>
+			</trans-unit>
+			<trans-unit id="tell_us" xml:space="preserve" approved="yes">
+				<source>TELL US YOUR OPINION</source>
+				<target>GIV DIN MENING</target>
+			</trans-unit>
+			<trans-unit id="wizIcon.title" xml:space="preserve" approved="yes">
+				<source>Poll</source>
+				<target>Afstemning</target>
+			</trans-unit>
+			<trans-unit id="wizIcon.description" xml:space="preserve" approved="yes">
+				<source>Insert a poll on page.</source>
+				<target>Indsæt en afstemning på siden.</target>
+			</trans-unit>
+			<trans-unit id="submitText" xml:space="preserve" approved="yes">
+				<source>Vote</source>
+				<target>Stem</target>
+			</trans-unit>
+			<trans-unit id="numberOfVotes" xml:space="preserve" approved="yes">
+				<source>Number of votes</source>
+				<target>Antal stemmer</target>
+			</trans-unit>
+	</body>
+</file>
+</xliff>
