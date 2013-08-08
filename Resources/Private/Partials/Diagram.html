@@ -1,0 +1,15 @@
+{namespace mocPoll=MOC\MocPoll\ViewHelpers}
+<div class="pollResults">
+	<ul class="chartlist">
+		<f:for each="{poll.responses}" as="answer">
+			<li><strong>{answer.reply}</strong>
+				<div class="bar-container">
+					<div class="bar" style="width:{mocPoll:percent(total: totalCount, issueCount: answer.count)}%">&nbsp;</div>
+					<div class="bar-label">(<mocPoll:percent total="{totalCount}" issueCount="{answer.count}" />%)</div>
+				</div>
+			</li>
+		</f:for>
+	</ul>
+</div>
+<p class="vote-count"><f:translate key="numberOfVotes" />: <span>{totalCount}</span></p>
+<div class="clear"></div>
