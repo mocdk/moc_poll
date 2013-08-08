@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-04-22T09:41:58Z">
+		<header />
+		<body>
+			<trans-unit id="settings">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="layout.simple">
+				<source>Simple</source>
+			</trans-unit>
+			<trans-unit id="layout.diagram">
+				<source>Diagram</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

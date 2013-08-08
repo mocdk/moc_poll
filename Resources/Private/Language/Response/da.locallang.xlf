@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="da" datatype="plaintext">
+		<body>
+			<trans-unit id="response">
+				<source>Answer</source>
+				<target>Svar</target>
+			</trans-unit>
+			<trans-unit id="reply">
+				<source>Reply</source>
+				<target>Svar</target>
+			</trans-unit>
+			<trans-unit id="count">
+				<source>Count</source>
+				<target>Antal svar</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

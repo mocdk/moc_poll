@@ -1,8 +1,19 @@
 <?php
-class Tx_MocPoll_Domain_Model_Poll extends Tx_MocPoll_Domain_Model_PollBase{
-	public function getTotalCount(){
+namespace MOC\MocPoll\Domain\Model;
+
+/**
+ * Class Poll
+ *
+ * @package MOC\MocPoll\Domain\Model
+ */
+class Poll extends PollBase {
+
+	/**
+	 * @return integer
+	 */
+	public function getTotalCount() {
 		$count = 0;
-		foreach($this->getResponses() as $response){
+		foreach ($this->getResponses() as $response) {
 			$count += $response->getCount();
 		}
 		return $count;

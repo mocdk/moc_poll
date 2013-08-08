@@ -1,0 +1,19 @@
+<f:layout name="default">
+	<f:section name="content">
+		<div class="questions">
+			<h5>{poll.question}</h5>
+			<form class="mocpoll-form">
+				<f:for each="{poll.responses}" as="answer">
+					<input type="radio" name="response" value="{answer.uid}" id="{answer.uid}" class="reply"/> <label for="{answer.uid}">{answer.reply}</label><br />
+				</f:for>
+			</form>
+			<div class="buttonPoll">
+				<input type="button" value="{f:translate(key:'submitText')}" class="vote-button" />
+			</div>
+		</div>
+		<div class="answers">
+			<h5>{poll.question}</h5>
+			<f:render partial="{layout}" arguments="{poll: poll, totalCount: totalCount, highest: highest, responses: responses}" />
+		</div>
+	</f:section>
+</f:layout>

@@ -1,0 +1,36 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:moc_poll/Resources/Private/Language/locallang_be.xlf:settings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.layout>
+						<TCEforms>
+							<label>LLL:EXT:moc_poll/Resources/Private/Language/locallang_be.xlf:layout</label>
+							<config>
+								<type>select</type>
+								<items>
+									<item index="0" type="array">
+										<numIndex index="0">LLL:EXT:moc_poll/Resources/Private/Language/locallang_be.xlf:layout.simple</numIndex>
+										<numIndex index="1">Simple</numIndex>
+									</item>
+									<item index="1" type="array">
+										<numIndex index="0">LLL:EXT:moc_poll/Resources/Private/Language/locallang_be.xlf:layout.diagram</numIndex>
+										<numIndex index="1">Diagram</numIndex>
+									</item>
+								</items>
+							</config>
+							<default>simple</default>
+						</TCEforms>
+					</settings.layout>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

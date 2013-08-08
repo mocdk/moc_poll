@@ -1,10 +1,18 @@
 <?php
-class Tx_MocPoll_ViewHelpers_PercentViewHelper extends Tx_Fluid_Core_ViewHelper_AbstractViewHelper {
+namespace MOC\MocPoll\ViewHelpers;
+/**
+ * Class PercentViewHelper
+ *
+ * @package MOC\MocPoll\ViewHelpers
+ */
+class PercentViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+
 	/**
-	 * @param int $total
-	 * @param int $response
+	 * @param integer $total
+	 * @param integer $issueCount
+	 * @return float
 	 */
-	function render($total, $issueCount){
+	public function render($total, $issueCount) {
 		return round($issueCount / $total * 100);
 	}
 }
