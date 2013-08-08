@@ -1,59 +1,84 @@
 <?php
-class Tx_MocPoll_Domain_Model_ResponseBase extends Tx_Extbase_DomainObject_AbstractEntity{
+namespace MOC\MocPoll\Domain\Model;
+
 /**
-* @var string
-*/
-protected $reply;
-/**
-* @var integer
-*/
-protected $count;
-/**
-* @var Tx_MocPoll_Domain_Model_Poll
-*/
-protected $poll;
-function __construct(){
-}
-/**
-* @return string
-*/
-function getReply(){
-return $this->reply;
-}
-/**
-* @param string $reply
-*/
-function setReply($reply){
-$this->reply = $reply;
-}
-/**
-* @return integer
-*/
-function getCount(){
-return $this->count;
-}
-/**
-* @param integer $count
-*/
-function setCount($count){
-$this->count = $count;
-}
-/**
-* @return Tx_Extbase_Persistence_ObjectStorage<Tx_MocPoll_Domain_Model_Poll>
-*/
-function getPolls(){
-return $this->poll;
-}
-/**
-* @param Tx_Extbase_Persistence_ObjectStorage<Tx_MocPoll_Domain_Model_Poll> $poll
-*/
-function setPolls(Tx_Extbase_Persistence_ObjectStorage $poll){
-$this->poll = $poll;
-}
-/**
-* @param Tx_MocPoll_Domain_Model_Poll $poll
-*/
-function addPoll(Tx_MocPoll_Domain_Model_Poll $poll){
-$this->poll->attach($poll);
-}
+ * Class ResponseBase
+ *
+ * @package MOC\MocPoll\Domain\Model
+ */
+class ResponseBase extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+
+	/**
+	 * @var string
+	 */
+	protected $reply;
+
+	/**
+	 * @var integer
+	 */
+	protected $count;
+
+	/**
+	 * @var \MOC\MocPoll\Domain\Model\Poll
+	 */
+	protected $poll;
+
+	/**
+	 * Constructer
+	 */
+	public function __construct() {
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getReply() {
+		return $this->reply;
+	}
+
+	/**
+	 * @param string $reply
+	 * @return void
+	 */
+	public function setReply($reply) {
+		$this->reply = $reply;
+	}
+
+	/**
+	 * @return integer
+	 */
+	public function getCount() {
+		return $this->count;
+	}
+
+	/**
+	 * @param integer $count
+	 * @return void
+	 */
+	public function setCount($count) {
+		$this->count = $count;
+	}
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MOC\MocPoll\Domain\Model\Poll>
+	 */
+	public function getPolls() {
+		return $this->poll;
+	}
+
+	/**
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MOC\MocPoll\Domain\Model\Poll> $poll
+	 * @return void
+	 */
+	public function setPolls(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $poll) {
+		$this->poll = $poll;
+	}
+
+	/**
+	 * @param \MOC\MocPoll\Domain\Model\Poll $poll
+	 * @return void
+	 */
+	public function addPoll(\MOC\MocPoll\Domain\Model\Poll $poll) {
+		$this->poll->attach($poll);
+	}
 }

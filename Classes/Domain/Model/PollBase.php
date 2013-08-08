@@ -1,63 +1,66 @@
 <?php
-class Tx_MocPoll_Domain_Model_PollBase extends Tx_Extbase_DomainObject_AbstractEntity{
+namespace MOC\MocPoll\Domain\Model;
+
+/**
+ * Class PollBase
+ *
+ * @package MOC\MocPoll\Domain\Model
+ */
+class PollBase extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+
 	/**
-	* @var string
-	*/
+	 * @var string
+	 */
 	protected $question;
-	
+
 	/**
-	* @var string
-	*/
-	protected $image;
-	
-	/**
-	* @lazy
-	* @var Tx_Extbase_Persistence_ObjectStorage<Tx_MocPoll_Domain_Model_Response>
-	*/
+	 * @lazy
+	 * @var Tx_Extbase_Persistence_ObjectStorage<\MOC\MocPoll\Domain\Model\Response>
+	 */
 	protected $responses;
-	function __construct(){
-	$this->responses = new Tx_Extbase_Persistence_ObjectStorage();
-	}
+
 	/**
-	* @return string
-	*/
-	function getQuestion(){
-	return $this->question;
+	 * Constructer
+	 */
+	public function __construct() {
+		$this->responses = new Tx_Extbase_Persistence_ObjectStorage();
 	}
+
 	/**
-	* @param string $question
-	*/
-	function setQuestion($question){
-	$this->question = $question;
+	 * @return string
+	 */
+	public function getQuestion() {
+		return $this->question;
 	}
+
 	/**
-	* @return string
-	*/
-	function getImage(){
-	return $this->image;
+	 * @param string $question
+	 * @return void
+	 */
+	public function setQuestion($question) {
+		$this->question = $question;
 	}
+
 	/**
-	* @param string $image
-	*/
-	function setImage($image){
-	$this->image = $image;
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MOC\MocPoll\Domain\Model\Response>
+	 */
+	public function getResponses() {
+		return $this->responses;
 	}
+
 	/**
-	* @return Tx_Extbase_Persistence_ObjectStorage<Tx_MocPoll_Domain_Model_Response>
-	*/
-	function getResponses(){
-	return $this->responses;
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MOC\MocPoll\Domain\Model\Response> $responses
+	 * @return void
+	 */
+	public function setResponses(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $responses) {
+		$this->responses = $responses;
 	}
+
 	/**
-	* @param Tx_Extbase_Persistence_ObjectStorage<Tx_MocPoll_Domain_Model_Response> $responses
-	*/
-	function setResponses(Tx_Extbase_Persistence_ObjectStorage $responses){
-	$this->responses = $responses;
-	}
-	/**
-	* @param Tx_MocPoll_Domain_Model_Response $responses
-	*/
-	function addResponse(Tx_MocPoll_Domain_Model_Response $responses){
-	$this->responses->attach($responses);
+	 * @param \MOC\MocPoll\Domain\Model\Response $responses
+	 * @return void
+	 */
+	public function addResponse(\MOC\MocPoll\Domain\Model\Response $responses) {
+		$this->responses->attach($responses);
 	}
 }

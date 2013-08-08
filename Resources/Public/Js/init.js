@@ -1,6 +1,3 @@
-jQuery(document).ready(function() {
-	jQuery(".mocpoll").each(function() {
-		/*global Poll*/
-		new Poll(this);
-	});
+jQuery(document).ready(function () {
+	jQuery('.mocpoll').poll();
 });
