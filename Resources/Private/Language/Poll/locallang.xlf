@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="poll">
+				<source>Poll</source>
+			</trans-unit>
+			<trans-unit id="responses">
+				<source>Responses</source>
+			</trans-unit>
+			<trans-unit id="question">
+				<source>Question</source>
+			</trans-unit>
+			<trans-unit id="image">
+				<source>Image</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

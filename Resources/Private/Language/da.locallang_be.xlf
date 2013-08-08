@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="da" datatype="plaintext">
+		<body>
+			<trans-unit id="settings">
+				<source>Settings</source>
+				<target>Indstillinger</target>
+			</trans-unit>
+			<trans-unit id="layout">
+				<source>Layout</source>
+				<target>Udseende</target>
+			</trans-unit>
+			<trans-unit id="layout.simple">
+				<source>Simple</source>
+				<target>Simpel</target>
+			</trans-unit>
+			<trans-unit id="layout.diagram">
+				<source>Diagram</source>
+				<target>Diagram</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
