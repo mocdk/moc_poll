@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="da" datatype="plaintext">
+		<body>
+			<trans-unit id="poll">
+				<source>Poll</source>
+				<target>Afstemning</target>
+			</trans-unit>
+			<trans-unit id="responses">
+				<source>Responses</source>
+				<target>Svar</target>
+			</trans-unit>
+			<trans-unit id="image">
+				<source>Image</source>
+				<target>Billede</target>
+			</trans-unit>
+			<trans-unit id="question">
+				<source>Question</source>
+				<target>Spørgsmål</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

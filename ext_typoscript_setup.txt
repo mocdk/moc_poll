@@ -1,0 +1,33 @@
+plugin.tx_mocpoll {
+	view {
+		templateRootPath = {$plugin.tx_mocpoll.view.templateRootPath}
+		partialRootPath = {$plugin.tx_mocpoll.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_mocpoll.view.layoutRootPath}
+	}
+}
+
+page.includeJSFooter {
+	mocPollLib = EXT:moc_poll/Resources/Public/JavaScript/Poll.js
+	mocPoll_init = EXT:moc_poll/Resources/Public/JavaScript/Init.js
+}
+
+pageMocPoll = PAGE
+pageMocPoll {
+	typeNum = 1375939455
+	config {
+		disableAllHeaderCode = 1
+		xhtml_cleaning = none
+		admPanel = 0
+		metaCharset = utf-8
+		additionalHeaders = Content-Type:text/xml;charset=utf-8
+		disablePrefixComment = 1
+	}
+	10 < tt_content.list.20.mocpoll_plugin
+	10 {
+		switchableControllerActions {
+			Poll {
+				1 = vote
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-09-13T09:42:20Z" product-name="moc_poll">
+		<header/>
+		<body>
+			<trans-unit id="pluginTitle" xml:space="preserve">
+				<source>MocPoll</source>
+			</trans-unit>
+			<trans-unit id="wizIcon.title" xml:space="preserve">
+				<source>Poll</source>
+			</trans-unit>
+			<trans-unit id="wizIcon.description" xml:space="preserve">
+				<source>Insert poll on page.</source>
+			</trans-unit>
+			<trans-unit id="submitText" xml:space="preserve">
+				<source>Vote</source>
+			</trans-unit>
+			<trans-unit id="numberOfVotes" xml:space="preserve">
+				<source>Number of votes</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
