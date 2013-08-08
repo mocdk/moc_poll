@@ -1,71 +1,41 @@
-function Poll(root){
-	var self = this;
-	self.root = root;
-	self.reply = null;
-	self.pollId = 0;
-	self.resultmode = "simple";
-	self.vote = function(){
+(function($) {
+	$.fn.poll = function() {
+		var that = $(this),
+			votingInProgess = false;
 
-		if(self.reply){
-			var url = 'index.php?type=500&pluginName=pi1&extensionName=mocpoll&tx_mocpoll_pi1[action]=vote&tx_mocpoll_pi1[controller]=Poll&tx_mocpoll_pi1[reply]='+
-								self.reply+
-								'&tx_mocpoll_pi1[pollId]=' + self.pollId +
-								'&tx_mocpoll_pi1[resultmode]=' + self.resultmode;
-			
-			
-			jQuery(".content",self.root).load(url, function(response, status, xhr) {
-				if (status == "error") {
-					//console.log(xhr.statusText + ' ' + xhr.status);
-				}
-				else{
-					//console.log(status);
-					self.setBarColors();
-				}
-			});
+		function vote(reply, poll, layout) {
+			if ((reply !== null) && (votingInProgess === false)) {
+				votingInProgess = true;
+				var url = '/index.php?type=1375939455&pluginName=plugin&extensionName=mocpoll&tx_mocpoll_plugin[action]=vote&tx_mocpoll_plugin[controller]=Poll' +
+					'&tx_mocpoll_plugin[reply]=' + reply +
+					'&tx_mocpoll_plugin[poll]=' + poll +
+					'&tx_mocpoll_plugin[layout]=' + layout ;
+				$('.content', that).load(url + ' .answers', function () {
+					$('.answers', this).show();
+				});
+			}
 		}
-	};
-		
-	self.init = function() {
-		self.pollId = jQuery(self.root).attr("smk:pollId");
-		self.resultmode = jQuery(self.root).attr("smk:resultMode");
-		jQuery('.vote-button',self.root).click(function(){
-			self.vote();
-		});
-		jQuery('.reply',self.root).bind('change', function(){
-			self.setReply(this.value);
-		});
-		
-		self.setBarColors();
-	};
-	
-	self.injectPollId = function (pollId){
-		self.pollId = pollId;
-	};
-	self.setResultMode = function(resultmode) {
-		self.resultmode = resultmode;	
-	};
 
-	self.setReply = function(reply){
-		self.reply = reply;
-	};
-	
-	self.setBarColors = function() {
-		var $selection = jQuery(self.root).find(".percentContainer .indexnumber");
-		
-		if (!$selection.length) return;
-		
-		var $candidate = null;
-		var high = 0;
+		return that.each(function () {
+			var reply = null,
+				layout = that.attr('data-layout'),
+				poll = that.attr('data-poll');
 
-		$selection.each(function(index,item) {
-			var val = parseInt($(this).text(),10);
-			if (val > high) {$candidate = $(this);high = val;}
+			if (parseInt($.cookie('moc_poll_' + poll), 10) === 1) {
+				$('.answers', that).show();
+				$('.questions', that).remove();
+			} else {
+				$('.questions', that).show();
+				$('.answers', that).remove();
+			}
+
+			$('.reply', that).bind('change', function () {
+				reply = this.value;
+			});
+
+			$('.vote-button', that).click(function () {
+				vote(reply, poll, layout);
+			});
 		});
-	
-		$candidate.addClass("percentGreen");
-		jQuery(self.root).find(".percentContainer .indexnumber:not(.percentGreen)").addClass("percentRed");
 	};
-
-	//console.log(jQuery('.reply',self.root));
-	self.init();
-}
+})(jQuery);

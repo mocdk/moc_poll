@@ -1,10 +1,19 @@
 <?php
-class Tx_MocPoll_Domain_Repository_PollRepository  extends Tx_MocHelpers_Domain_Repository_MocRepository {
-  public function createQuery(){
+namespace MOC\MocPoll\Domain\Repository;
+
+/**
+ * Class PollRepository
+ *
+ * @package MOC\MocPoll\Domain\Repository
+ */
+class PollRepository extends \MOC\MocHelpers\Domain\Repository\AbstractRepository {
+
+	/**
+	 * @return \TYPO3\CMS\Extbase\Persistence\QueryInterface
+	 */
+	public function createQuery() {
 		$query = parent::createQuery();
 		$query->getQuerySettings()->setRespectStoragePage(FALSE);
 		return $query;
 	}
-
-  
 }
