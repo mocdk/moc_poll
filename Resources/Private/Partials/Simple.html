@@ -1,0 +1,16 @@
+{namespace mocPoll=MOC\MocPoll\ViewHelpers}
+<ul>
+	<f:for each="{responses}" as="answer">
+		<li>
+			{answer.reply}&nbsp;
+			<f:if condition="{highest} == {mocPoll:percent(total: totalCount, issueCount: answer.count)}">
+				<f:then>
+					<span class="percentage highest">(<mocPoll:percent total="{totalCount}" issueCount="{answer.count}" />%)</span>
+				</f:then>
+				<f:else>
+					<span class="percentage">(<mocPoll:percent total="{totalCount}" issueCount="{answer.count}" />%)</span>
+				</f:else>
+			</f:if>
+		</li>
+	</f:for>
+</ul>
