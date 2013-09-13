@@ -13,7 +13,7 @@
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Afstemning',
 	'description' => '',
-	'category'=> 'fe',
+	'category' => 'fe',
 	'author' => 'Mikkel H. Henriksen',
 	'author_email' => 'mikkel@moc.net',
 	'shy' => '',
