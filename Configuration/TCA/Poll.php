@@ -25,6 +25,7 @@ $TCA['tx_mocpoll_poll'] = array(
 				'appearance' => array(
 					'collapseAll' => FALSE,
 					'expandSingle' => FALSE,
+					'newRecordLinkAddTitle' => TRUE,
 					'useSortable' => TRUE,
 					'levelLinksPosition' => 'both',
 					'enabledControls' => array(
