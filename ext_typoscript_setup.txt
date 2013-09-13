@@ -6,6 +6,10 @@ plugin.tx_mocpoll {
 	}
 }
 
+page.includeCSS {
+	MocPoll = EXT:moc_poll/Resources/Public/Styles/MocPoll.css
+}
+
 page.includeJSFooter {
 	mocPollLib = EXT:moc_poll/Resources/Public/JavaScript/Poll.js
 	mocPollInit = EXT:moc_poll/Resources/Public/JavaScript/Init.js
